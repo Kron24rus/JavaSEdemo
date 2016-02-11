@@ -1,0 +1,99 @@
+<!--
+	#!LOGINMESSAGE!#
+
+		Content: Login status
+
+		Variants:
+			Login invitation:
+				<p class=muted>Enter username and password</p>
+				
+			Login fail:
+				<p class=text-error>Invalid username or password</p>
+
+
+!-->
+
+<!doctype html>
+
+<html>
+<head>
+	<title>Bat Chat</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bc-index.js"></script>
+</head>
+
+<body id="thebody">
+
+	<!-- Navigation Bar !-->
+	<div class="navbar navbar-static navbar-inverse navbar-fixed-top" id="navbar">
+		<div class="navbar-inner">
+			<div class="container" style="width: auto;">
+				<a class="brand" style="color: #fff;"> &nbsp;Bat Chat</a>
+				<ul class="nav" role="navigation">
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="username" role="button" style="color: #333;">
+							<i class="icon-th-list"></i>
+							Rooms
+							<b class="caret"></b>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav" role="navigation">
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="username" role="button" style="color: #333;">
+							<i class="icon-wrench"></i>
+							Admin Tools
+							<b class="caret"></b>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav pull-right" role="navigation">
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="username" role="button" style="color: #333;"> 
+							<i class="icon-user"></i>
+							Not Logged In
+							<b class="caret"></b>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content !-->
+	<div class="container">
+		<div class="span12" id="allcontent">
+			<form>
+				<div class="control-group" id="loginmsg">
+					#!LOGINMESSAGE!#
+					&lt;div&gt;
+				</div>
+				<div class="control-group">
+					<div class="input-prepend">
+						<span class="add-on">
+							<i class="icon-user"></i>
+						</span>
+						<input class="span3" id="usernameInput" type="text" placeholder="Username" onchange="checkInput()" onkeyup="checkInput()">
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="input-prepend">
+						<span class="add-on">
+							<i class="icon-asterisk"></i>
+						</span>
+						<input class="span3" id="passwordInput" type="password" placeholder="Password" onchange="checkInput()" onkeyup="checkInput()">
+					</div>
+				</div>
+				<div class="control-group">
+					<input type="submit" class="btn btn-primary disabled" id="loginButton" value="Sign In">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
